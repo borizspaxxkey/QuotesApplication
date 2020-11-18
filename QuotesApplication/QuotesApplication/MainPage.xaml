@@ -7,8 +7,8 @@
              x:Class="QuotesApplication.MainPage">
 
     <StackLayout>
-        <Label FontSize="Large" Rotation="{Binding Source={x:Reference SliderRotation}, Path=Value}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Text="Xamarin"/>
-        <Slider x:Name="SliderRotation" Maximum="360"/>
+        <Entry Placeholder="Source" x:Name="EntrySource"/>
+        <Entry Placeholder="Target" Text="{Binding Source={x:Reference EntrySource}, Path=Text, Mode=TwoWay}"/>
     </StackLayout>
 
 </ContentPage>
