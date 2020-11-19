@@ -3,12 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:QuotesApplication"
              mc:Ignorable="d"
              x:Class="QuotesApplication.MainPage">
-
+    <!--<ContentPage.BindingContext>
+        <local:MainViewModel/>
+    </ContentPage.BindingContext>-->
     <StackLayout>
-        <Entry Placeholder="Source" x:Name="EntrySource"/>
-        <Entry Placeholder="Target" Text="{Binding Source={x:Reference EntrySource}, Path=Text, Mode=TwoWay}"/>
+        <Entry Placeholder="User Name" Text="{Binding UserName}"/>
+        <Label Text="{Binding UserName}"/>
+        <Button Text="Login" Command="{Binding LoginCommand}"/>
     </StackLayout>
 
 </ContentPage>
